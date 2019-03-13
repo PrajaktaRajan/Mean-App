@@ -1,0 +1,15 @@
+<div class="container">
+  <div class="row" *ngFor="let user of users">
+    <div class="card card-block">
+      <h4 class="card-title">{{user.name }}</h4>
+      <p class="card-text">{{user.location}}</p>
+   
+    </div>
+  </div>
+  <div>
+    <input type="text" [(ngModel)]="newUser.name" placeholder="user name">
+    <input type="text" [(ngModel)]="newUser.location" placeholder="user location">
+    
+    <button (click)="addUser(newUser)"> Add User </button>
+  </div>
+</div>
